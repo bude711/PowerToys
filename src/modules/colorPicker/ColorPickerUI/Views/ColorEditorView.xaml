@@ -18,7 +18,9 @@
         </Grid.ColumnDefinitions>
 
         <!-- Side bar -->
-        <Grid Background="{DynamicResource SecondaryBackgroundBrush}">
+        <Grid Background="{DynamicResource SecondaryBackgroundBrush}"
+              Height="350"
+              VerticalAlignment="Top">
             <ui:ListView x:Name="HistoryColors" 
                          Margin="0,48,0,0"
                          Grid.Row="1"
@@ -86,7 +88,7 @@
         </Grid>
 
         <!-- Title bar -->
-        <Grid Grid.ColumnSpan="2"
+        <Grid Grid.ColumnSpan="2"               
               Height="32"
               Background="Transparent"
               VerticalAlignment="Top"
@@ -129,12 +131,38 @@
                 <Button.Content>
                     <TextBlock Text="&#xEF3C;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
                 </Button.Content>
+            </Button>            
+        </Grid>
+       
+        <!-- New Button-->
+
+        <Grid Grid.ColumnSpan="2"            
+       Height="32"      
+       VerticalAlignment="Bottom"
+       Background="Transparent"
+       KeyboardNavigation.DirectionalNavigation="Contained"
+       IsHitTestVisible="True">
+            <e:Interaction.Behaviors>
+                <behaviors:DragWindowBehavior/>
+            </e:Interaction.Behaviors>            
+
+            <Button Width="64"
+             Height="32"
+             TabIndex="0"
+             Command="{Binding ClearColorHistoryCommand}"   
+             Background="Transparent"
+             FontFamily="Segoe MDL2 Assets"
+             ui:FocusVisualHelper.FocusVisualMargin="-1"
+             ToolTipService.ToolTip="{x:Static p:Resources.Select}"
+             AutomationProperties.Name="{x:Static p:Resources.Select}">
+                <Button.Content>
+                    <TextBlock Text="&#x1F5D1;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
+                </Button.Content>
             </Button>
         </Grid>
 
-
         <!-- Main grid -->
-        <Grid Grid.Column="1"
+        <Grid Grid.Column="1"              
               Visibility="{Binding ColorsHistory.Count, Converter={StaticResource numberToVisibilityConverter}}">
             <ScrollViewer IsTabStop="False"
                           Margin="0,90,0,0">
