@@ -153,8 +153,8 @@
              Background="Transparent"
              FontFamily="Segoe MDL2 Assets"
              ui:FocusVisualHelper.FocusVisualMargin="-1"
-             ToolTipService.ToolTip="{x:Static p:Resources.Select}"
-             AutomationProperties.Name="{x:Static p:Resources.Select}">
+             ToolTipService.ToolTip="{x:Static p:Resources.DELETE_COLOR_HISTORY}"
+             AutomationProperties.Name="{x:Static p:Resources.DELETE_COLOR_HISTORY}">
                 <Button.Content>
                     <ui:FontIcon Glyph="&#xE74D;" />
                 </Button.Content>

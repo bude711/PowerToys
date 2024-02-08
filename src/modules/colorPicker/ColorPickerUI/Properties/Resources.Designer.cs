@@ -160,6 +160,15 @@ namespace ColorPicker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete color history.
+        /// </summary>
+        public static string DELETE_COLOR_HISTORY {
+            get {
+                return ResourceManager.GetString("DELETE_COLOR_HISTORY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
         public static string Export_by {

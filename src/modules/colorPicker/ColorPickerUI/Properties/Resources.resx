@@ -400,4 +400,8 @@
     <value>Plum</value>
     <comment>Plum color</comment>
   </data>
+  <data name="DELETE_COLOR_HISTORY" xml:space="preserve">
+    <value>Delete color history</value>
+    <comment>Tooltip for the delete color history button</comment>
+  </data>
 </root>
