@@ -156,7 +156,7 @@
              ToolTipService.ToolTip="{x:Static p:Resources.Select}"
              AutomationProperties.Name="{x:Static p:Resources.Select}">
                 <Button.Content>
-                    <TextBlock Text="&#x1F5D1;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
+                    <ui:FontIcon Glyph="&#xE74D;" />
                 </Button.Content>
             </Button>
         </Grid>
